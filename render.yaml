@@ -3,5 +3,6 @@ services:
     name: dogs-vs-cats-streamlit
     env: python
     plan: free
+    pythonVersion: 3.10.13
     buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run app.py
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
